@@ -94,7 +94,7 @@ window.onload = () => {
 
         // Reset the button's color to all be inactive
         all_btns.forEach(x => {
-            x.style.backgroundColor = "#777777"
+            x.style.backgroundColor = "#42464d"
         })
 
         // Reset settings back to default
@@ -114,7 +114,7 @@ window.onload = () => {
             output += codes[settings.fgcolor + "-fg"] + ";"
             fgcolor_btns.forEach(b => {
                 if (b.innerHTML === settings.fgcolor) {
-                    b.style.backgroundColor = "#507f9b"
+                    b.style.backgroundColor = "#7289da"
                 }
             })
         }
@@ -122,7 +122,7 @@ window.onload = () => {
             output += codes[settings.bgcolor + "-bg"] + ";"
             bgcolor_btns.forEach(b => {
                 if (b.innerHTML === settings.bgcolor) {
-                    b.style.backgroundColor = "#507f9b"
+                    b.style.backgroundColor = "#7289da"
                 }
             })
         }
@@ -130,24 +130,24 @@ window.onload = () => {
             output += codes[x] + ";"
             style_btns.forEach(b => {
                 if (b.innerHTML === x) {
-                    b.style.backgroundColor = "#507f9b"
+                    b.style.backgroundColor = "#7289da"
                 }
             })
         })
 
         // If it is a reset command, show the reset code
         if (settings.reset) {
-            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#507f9b"
+            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#7289da"
             document.getElementById('output').value = settings.escape + "[0m"
         }
         // If nothing is selected, reset the output box
         else if (output === "") {
-            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#777777"
+            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#42464d"
             document.getElementById('output').value = ""
         }
         // Otherwise, proceed as normal.
         else {
-            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#777777"
+            document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "#42464d"
             // Construct the resulting escape sequence + ANSI codes
             document.getElementById('output').value = settings.escape + "[" + output.slice(0, -1) + "m"
         }
