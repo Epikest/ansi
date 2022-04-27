@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #262626;
+    background-color: #36393f;
     font-family: FiraCode;
 }
 
@@ -55,7 +55,7 @@ body {
 
 button {
     font-family: inherit;
-    background-color: rgb(119, 119, 119);
+    background-color: rgb(114, 137, 218);
     border-radius: 8px;
     border-width: 0;
     color: white;
