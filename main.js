@@ -49,7 +49,7 @@ window.onload = () => {
         bgcolor: "",
         style: [],
         reset: false,
-        escape: "\\x1b",
+        escape: "",
     }
 
     // Functions to handle button clicks
