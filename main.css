@@ -46,7 +46,7 @@ body {
     border: none;
     border-style: solid;
     border-width: 1px;
-    border-color: #777777;
+    border-color: #42464d;
     text-align: center;
     font-size: 1.25rem;
     margin-bottom: 10px;
@@ -55,7 +55,7 @@ body {
 
 button {
     font-family: inherit;
-    background-color: rgb(114, 137, 218);
+    background-color: #36393f;
     border-radius: 8px;
     border-width: 0;
     color: white;
