@@ -41,7 +41,6 @@ window.onload = () => {
     const fgcolor_btns = document.querySelectorAll(".fgcolor-btn")
     const bgcolor_btns = document.querySelectorAll(".bgcolor-btn")
     const style_btns = document.querySelectorAll(".style-btn")
-    const escape_btns = document.querySelectorAll(".escape-btn")
 
     // Default settings
     let settings = {
@@ -87,10 +86,6 @@ window.onload = () => {
     }
     let selReset = (e) => {
         settings.reset = !settings.reset
-        updateOutput()
-    }
-    let selEscape = (e) => {
-        settings.escape = e.innerHTML
         updateOutput()
     }
 
@@ -139,11 +134,6 @@ window.onload = () => {
                 }
             })
         })
-        escape_btns.forEach(b => {
-            if (b.innerHTML === settings.escape) {
-                b.style.backgroundColor = "#507f9b"
-            }
-        })
 
         // If it is a reset command, show the reset code
         if (settings.reset) {
@@ -172,9 +162,6 @@ window.onload = () => {
     })
     style_btns.forEach(x => {
         x.onclick = () => {selStyle(x)}
-    })
-    escape_btns.forEach(x => {
-        x.onclick = () => {selEscape(x)}
     })
 
     document.getElementsByClassName("reset-btn")[0].onclick = () => {selReset()}
